@@ -1,0 +1,9 @@
+Participant_ID,Timestamp,Tone_File,Tone_Index,Valence,Arousal,Diff
+diouoi,2025-11-24T04:22:09.904408,scale_24edo_442Hz.wav,7,3,3,3
+diouoi,2025-11-24T04:22:14.156501,melody_12edo_442Hz 2.wav,0,3,3,3
+diouoi,2025-11-24T04:22:15.311350,scale_12edo_442Hz.wav,5,3,3,3
+diouoi,2025-11-24T04:22:17.761170,scale_12edo_442Hz 2.wav,4,3,3,3
+diouoi,2025-11-24T04:22:18.351997,scale_24edo_442Hz 2.wav,6,3,3,3
+diouoi,2025-11-24T04:22:18.893087,melody_24edo_442Hz.wav,3,3,3,3
+diouoi,2025-11-24T04:22:19.393321,melody_24edo_442Hz 2.wav,2,3,3,3
+diouoi,2025-11-24T04:22:21.655411,melody_12edo_442Hz.wav,1,3,3,3
