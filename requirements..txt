@@ -1,4 +1,6 @@
 streamlit
-soundfile
-numpy
 pandas
+numpy
+soundfile
+scipy
+
