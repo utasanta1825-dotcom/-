@@ -139,23 +139,28 @@ st.markdown(
 )
 st.progress((index+1)/total)
 
+
+
 # ---------- 再生 ----------
 audio_bytes = load_audio_bytes(tone_path)
 
 if audio_bytes:
     # --- 再生ボタン（状態管理用） ---
-　　　　if st.button("▶ 再生を有効化"):
-    　　　　st.session_state.played = True
-   　　　　 st.session_state.play_count += 1
+    if st.button("▶ 再生を有効化"):
+        st.session_state.played = True
+        st.session_state.play_count += 1
 
-# --- audioプレイヤーは常に表示 ---
-st.audio(audio_bytes, format="audio/wav")
-
-st.caption(f"再生回数：{st.session_state.play_count}")
+    # --- audioプレイヤー ---
+    if st.session_state.played:
+        st.audio(audio_bytes, format="audio/wav")
+    else:
+        st.info("▶ 再生を有効化してから音を再生してください")
 
     st.caption(f"再生回数：{st.session_state.play_count}")
+
 else:
     st.error("音源の読み込みに失敗しました。")
+
 
 # ---------- 評価 ----------
 st.markdown("<div class='section'>", unsafe_allow_html=True)
