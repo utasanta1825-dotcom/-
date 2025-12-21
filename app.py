@@ -139,19 +139,16 @@ st.markdown(
 )
 st.progress((index+1)/total)
 
-
-
 # ---------- 再生 ----------
 audio_bytes = load_audio_bytes(tone_path)
 
 if audio_bytes:
-    # --- 再生ボタン（状態管理用） ---
+    # 再生ボタン（状態管理）
     if st.button("▶ 再生を有効化"):
         st.session_state.played = True
         st.session_state.play_count += 1
 
-
-    # --- audioプレイヤー ---
+    # audioプレイヤー（表示制御）
     if st.session_state.played:
         st.audio(audio_bytes, format="audio/wav")
     else:
