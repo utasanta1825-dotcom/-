@@ -143,10 +143,15 @@ st.progress((index+1)/total)
 audio_bytes = load_audio_bytes(tone_path)
 
 if audio_bytes:
-    if st.button("▶ 音を再生"):
-        st.session_state.played = True
-        st.session_state.play_count += 1
-        st.audio(audio_bytes, format="audio/wav")
+    # --- 再生ボタン（状態管理用） ---
+if st.button("▶ 再生を有効化"):
+    st.session_state.played = True
+    st.session_state.play_count += 1
+
+# --- audioプレイヤーは常に表示 ---
+st.audio(audio_bytes, format="audio/wav")
+
+st.caption(f"再生回数：{st.session_state.play_count}")
 
     st.caption(f"再生回数：{st.session_state.play_count}")
 else:
