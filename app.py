@@ -150,11 +150,6 @@ if audio_bytes:
         st.session_state.played = True
         st.session_state.play_count += 1
 
-    if st.session_state.played:
-    st.audio(audio_bytes, format="audio/wav")
-else:
-    st.info("▶ 再生を有効化してから音を再生してください")
-
 
     # --- audioプレイヤー ---
     if st.session_state.played:
