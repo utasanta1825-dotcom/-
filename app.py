@@ -10,7 +10,7 @@ import wave
 import pandas as pd
 
 # --- 設定 ---
-TONE_DIR = "24edo_single_tones"
+TONE_DIR = "microtone"
 LOCAL_CSV = "evaluation_results.csv"
 ADMIN_PIN = "0000"
 
